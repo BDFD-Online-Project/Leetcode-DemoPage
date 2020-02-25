@@ -1,0 +1,39 @@
+<br><hr>
+  <form action="/category" method="GET">
+    <div>
+      <label>Input Category Name</label>
+      <input type="text" name="category_name" value="<%=searchOptions.category_name%>">
+    </div>
+    <div>
+      <label>Input Type Name</label>
+      <input type="text" name="type_name" value="<%=searchOptions.type_name%>">
+    </div>
+    <button type="submit">Search</button>
+  </form>
+<br><hr>
+<table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Category</th>
+            <th scope="col">Type</th>
+            <th scope="col">View</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+        <% for (var i = 0; i <categories.length; i++) {%>
+            <tr>
+              <th scope="row"><%= [i+1]%></th>
+              <td><%= categories[i].category_name%></td>
+              <td><%= categories[i].type_name%></td>        
+              <td><a href="/category/<%=categories[i].id%>">Questions of <%= categories[i].category_name%>-<%= categories[i].type_name%> </a></td>
+              <td><a href="/category/<%=categories[i].id%>/edit">Edit</a></td>
+              <td><%- include('../partials/_delete_form', {url: `/category/${categories[i].id}`}) %></td>
+            </tr>
+        <% } %>
+        </tbody>
+</table>
+
+<script> document.title = 'Leetcode Demo Home Pages' </script>

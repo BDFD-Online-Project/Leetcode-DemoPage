@@ -1,0 +1,18 @@
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+        <div class="card card-body">
+            <h1 class="text-center mb-3">
+                <i class="fas fa-user-plus"></i> Edit Type Information
+                </h1>
+                <form action="/category/<%= category.id %>/edit?_method=put" method="post">
+                    <%-include('_category_form_fields')%>
+                    <a href="/category/<%= category.id %>"> Go Back See Detail Type Information</a>
+                    <button type="submit">Update Category-Type</button>
+                </form>
+            </h1>
+        </div>
+    </div>
+</div>
+    
+
+<script> document.title = 'Category Edit Pages' </script>

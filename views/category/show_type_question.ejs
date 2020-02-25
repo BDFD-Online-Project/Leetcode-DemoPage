@@ -1,0 +1,26 @@
+<br><hr>
+<div class="accordion" id="accordionExample">
+<h2><%= category.category_name %></h2>
+<h2><%= category.type_name %></h2>            
+<a href="/category/<%=category.id%>/edit">Edit</a>
+    <% question.forEach(question => { %>
+    <div class="card">
+        <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#<%= question.title %>" aria-expanded="true" aria-controls="collapseOne">
+            Question<%= question.number %>
+            </button>
+            </h2>
+        </div>
+    </div>
+    <div id="<%= question.title %>" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div class="card-body">
+        Question Title：<%= question.title %><br><hr>
+        Description: <%= question.description %><br><hr>
+        Tip: <%= question.tip %><br><hr>
+        Analyze: <%= question.analyze %><br><hr>
+        Question Link: <a href="/question/<%=question.id%>">View Question Detail</a>
+        </div>
+    </div>
+    <% }) %>
+</div>

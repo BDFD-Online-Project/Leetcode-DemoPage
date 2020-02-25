@@ -1,0 +1,18 @@
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+        <div class="card card-body">
+            <h1 class="text-center mb-3">
+                <i class="fas fa-user-plus"></i> Register New Question
+                </h1>
+                <form action="/question/new" method="post">
+                    <%-include('_new_question_register_page')%>
+                    <a href="/question"> Go Back To Home Page</a>
+                    <button type="submit">Create New Question</button>
+                </form>
+            </h1>
+        </div>
+    </div>
+</div>
+
+
+<script> document.title = 'Create New Question Pages' </script>

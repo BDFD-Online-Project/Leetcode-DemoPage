@@ -1,0 +1,18 @@
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+        <div class="card card-body">
+            <h1 class="text-center mb-3">
+                <i class="fas fa-user-plus"></i>View Specific Question
+                </h1>
+                <form action="/question/<%= question.id %>?_method=put" method="post">
+                    <%-include('_view_single_question_page')%>
+                    <a href="/question"> Go Back To Queston List Page</a><br>
+                    <a href="/question/<%=question.id%>/edit">Edit</a>
+                </form>
+            </h1>
+        </div>
+    </div>
+</div>
+
+
+<script> document.title = 'Question Detail Pages' </script>

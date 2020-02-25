@@ -1,0 +1,18 @@
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+        <div class="card card-body">
+            <h1 class="text-center mb-3">
+                <i class="fas fa-user-plus"></i>Edit Specific Question
+                </h1>
+                <form action="/question/<%= question.id %>?_method=put" method="post">
+                    <%-include('_edit_single_question_page')%>
+                    <a href="/question/<%= question.id %>"> Go Back To Question Detail</a><br>
+                    <button type="submit">Update Question Info</button>
+                </form>
+            </h1>
+        </div>
+    </div>
+</div>
+
+
+<script> document.title = 'Edit Question Pages' </script>

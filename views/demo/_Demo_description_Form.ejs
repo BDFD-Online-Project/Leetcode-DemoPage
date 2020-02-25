@@ -1,0 +1,49 @@
+<h1>Welcome To Question <%= question[0].number %> <br>Title : <%= question[0].title %> Demo Page<br></h1>
+<td><a href="/question/<%=question[0].id%>/edit">Edit this question</a></td>  
+<br><br>
+<div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Question Description
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+        <textarea rows="10" cols="50"  class="form-control" name="description"><%= question[0].description %></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Tip and Analyze
+        </button>
+      </h2>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+        <input type="text" id="tip" class="form-control" name="tip" value="<%= question[0].tip %>"><br>
+        <textarea rows="5" cols="50" id="analyze" class="form-control" name="analyze"><%= question[0].analyze %></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Solution
+        </button>
+      </h2>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+        <textarea rows="10" cols="50" id="solution" class="form-control" name="solution"><%= question[0].solution %></textarea>
+      </div>
+    </div>
+  </div>
+</div>
